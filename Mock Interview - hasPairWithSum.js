@@ -31,5 +31,5 @@ function hasPairWithSum (arr, num) {
 }
 
 
-console.log(hasPairWithSum([1,2,3,9], 8));
-console.log(hasPairWithSum([1,2,4,4], 8));
+console.log(hasPairWithSum([1,2,3,9], 8)); // false
+console.log(hasPairWithSum([1,2,4,4], 8)); // true
