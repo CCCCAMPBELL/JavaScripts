@@ -34,7 +34,17 @@ countAllCharacters("banana");
 
 
 
+// Another refactored solution using Map() instead of an Object
 
+function countAllCharacters(str) {
+    let resultMap = new Map();
+    str.replace(/[\s\S]/g, function(i) { 
+        let val = resultMap.has(i) ? resultMap.get(i) + 1 : 1;
+        resultMap.set(i, val);
+        });
+    return resultMap;
+}
+countAllCharacters("banana");
 
 
 
