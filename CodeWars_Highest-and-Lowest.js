@@ -17,7 +17,7 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 
 function highAndLow(numbers){
-  var numArr = numbers.split(" ").map(x => parseInt(x));
+  var numArr = numbers.split(" ").map(x => parseFloat(x));
   var high = Math.max(...numArr);
   var low = Math.min(...numArr);
   return high + " " + low;
