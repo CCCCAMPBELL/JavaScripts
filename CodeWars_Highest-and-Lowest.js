@@ -17,12 +17,19 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 
 function highAndLow(numbers){
+  var numArr = numbers.split(" ").sort((a , b) => +b - +a);
+  return numArr[0]  + " " + numArr.pop();
+}
+
+
+/* Old code:
+function highAndLow(numbers){
   var numArr = numbers.split(" ").map(x => parseFloat(x));
   var high = Math.max(...numArr);
   var low = Math.min(...numArr);
   return high + " " + low;
 }
-
+*/
 
 /*
 Test.assertEquals(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"), "542 -214");
