@@ -28,7 +28,7 @@ var scrabbleLetterValues = {
    };
 
 function scrabbleWordScore (str) {
-      return str.toUpperCase().split('').reduce(function (a,c) { return a + scrabbleLetterValues[c]; } , 0 );
+      return str.toUpperCase().split('').reduce(function (a,c) { return (/[A-Z]/g.test(c) && scrabbleLetterValues[c] != undefined) ? a + scrabbleLetterValues[c] : a + 0; } , 0 );
 }
 
 
