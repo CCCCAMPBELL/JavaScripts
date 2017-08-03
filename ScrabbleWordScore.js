@@ -32,5 +32,6 @@ function scrabbleWordScore (str) {
 }
 
 
-scrabbleWordScore("HAPPY");
-scrabbleWordScore("FEET");
+scrabbleWordScore("HAPPY"); // 15
+scrabbleWordScore("FEET"); // 7
+scrabbleWordScore("H123A P456 P789 Y!@#$%^&*()"); // 15
