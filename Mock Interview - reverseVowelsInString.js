@@ -26,3 +26,21 @@ The interviewer asked the interviewee to reverse all of the vowels in a string.
 I wanted to work through a solution prior watching the complete mock interview.
 This also works as a good practive for expanding my knowledge.
 */
+
+// refactored solution:
+function reverseVowels(str) {
+   str = str.split('');
+   let i = 0;
+   let j = str.length - 1;
+   do {
+     if ( (/[aeiou]/i.test(str[i]) ) && ( /[aeiou]/i.test(str[j]) ) ) {
+       [ str[i] , str[j] ] = [ str[j] , str[i] ];
+       i++;
+       j--;
+     }
+     else if (/[aeiou]/i.test(str[i])) j--;
+     else i++;
+   } while (i < j);
+   return str.join('');
+}
+reverseVowels('Acknowledgement')
