@@ -43,4 +43,16 @@ function reverseVowels(str) {
    } while (i < j);
    return str.join('');
 }
-reverseVowels('Acknowledgement')
+reverseVowels('Acknowledgement');
+
+
+
+
+
+
+
+
+
+
+
+
