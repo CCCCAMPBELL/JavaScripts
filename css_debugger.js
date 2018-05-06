@@ -1,5 +1,5 @@
    function css_debugger() {
-      if (("is_css_debugging" in window) === false) { 
+      if (window.hasOwnProperty("is_css_debugging") === false) { 
          is_css_debugging = false; 
       }
    
